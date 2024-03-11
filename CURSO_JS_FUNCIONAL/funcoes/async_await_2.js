@@ -12,10 +12,19 @@ function gerarNumerosEntre(min, max, numerosProibidos) {
 }
 
 async function gerarMegaSena(qtdeNumeros) {
-    const numeros = []
-    for (let _ of Array(qtdeNumeros).fill()) {
-        // await gerarNumerosEntre(1, 60, numeros)
-        numeros.push(gerarNumerosEntre(1, 60, numeros))
+    try {
+        const numeros = []
+        for (let _ of Array(qtdeNumeros).fill()) {
+            // await gerarNumerosEntre(1, 60, numeros)
+            numeros.push(await gerarNumerosEntre(1, 60, numeros))
+        }
+        return numeros
+    } catch (e) {
+        throw `ocorreu erro ${e}`
     }
+
 }
 
+gerarMegaSena(30)
+    .then(console.log)
+    .catch(console.log)
