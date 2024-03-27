@@ -5,7 +5,7 @@ curso udemy
 CURSO_JS_FUNCIONAL
 https://github.com/brunocoio/javascript
 
-Aula atual 108
+Curso concluído
 
 Explicação de conceitos e de como pensar quando programar para uma maneira mais limpa e funcional para refatoração
 
@@ -95,3 +95,27 @@ RxJS
     observeOn
     asyncScheduler
     endsWith
+    lodash (- npm i lodash)
+
+    Projeto final (ler texto como projeto inicial mas com o conheicmento avançado)
+
+Lambda (aplicação de funç~eos em lambda)
+    self
+    pri
+    ult
+    tro = flip
+    t = true
+    f = false
+    inspect
+    not (unário)
+    and (binário)
+    or (binário)
+    eq
+    or
+
+Conclusão
+JavaScript_Funcional_Reativo_BrunoDepieriBarduchi.pdf
+
+referência
+https://github.com/cod3rcursos/javascript-funcional
+https://www.udemy.com/course/javascript-funcional
