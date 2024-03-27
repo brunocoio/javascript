@@ -1,14 +1,25 @@
 const fs = require('fs')
 const path = require('path')
 
+function composicao(...fns) {
+    return function(valor) {
+        return fns.reduce(async (acc, fn) => {
+            if(Promise.resolve(acc) === acc) {
+                return fn(await acc)
+            } else {
+                return fn(acc)
+            }
+        }, valor)
+    }
+}
+
 function lerDiretorio(caminho) {
     return new Promise((resolve, reject) => {
         try {
-            const arquivos = fs.readdirSync(caminho)
-            const arquivosCompletos = arquivos.map(arquivo => {
+            const arquivos = fs.readdirSync(caminho).map(arquivo => {
                 return path.join(caminho, arquivo)
             })
-            resolve(arquivosCompletos)
+            resolve(arquivos)
         } catch (e) {
             reject(e)
         }
@@ -18,9 +29,9 @@ function lerDiretorio(caminho) {
 function lerArquivo(caminho) {
     return new Promise((resolve, reject) => {
         try {
-            const conteudo = fs.readFileSync(caminho, { encoding: 'utf8' })
+            const conteudo = fs.readFileSync(caminho, { encoding: 'utf-8' })
             resolve(conteudo.toString())
-        } catch {
+        } catch (e) {
             reject(e)
         }
     })
@@ -50,7 +61,6 @@ function removerElementosSeApenasNumero(array) {
     return array.filter(el => {
         const num = parseInt(el.trim())
         return num !== num
-        // return !(num != 0 && !!num)
     })
 }
 
@@ -59,7 +69,6 @@ function removerSimbolos(simbolos) {
         return array.map(el => {
             return simbolos.reduce((acc, simbolo) => {
                 return acc.split(simbolo).join('')
-
             }, el)
         })
     }
@@ -84,15 +93,16 @@ function agruparElementos(palavras) {
     }, {}))
 }
 
-function ordenarPorAtributoNumerico(attr, ordem = 'asc') {
+function ordernarPorAtribNumerico(attr, ordem = 'asc') {
     return function (array) {
-        const asc = (obj1, obj2) => obj1[attr] - obj2[attr]
-        const desc = (obj1, obj2) => obj2[attr] - obj1[attr]
-        return array.sort(ordem === 'asc' ? asc : desc)
+        const asc = (o1, o2) => o1[attr] - o2[attr]
+        const desc = (o1, o2) => o2[attr] - o1[attr]
+        return [...array].sort(ordem === 'asc' ? asc : desc)
     }
 }
 
 module.exports = {
+    composicao,
     lerDiretorio,
     lerArquivo,
     lerArquivos,
@@ -104,5 +114,5 @@ module.exports = {
     mesclarElementos,
     separarTextoPor,
     agruparElementos,
-    ordenarPorAtributoNumerico,
+    ordernarPorAtribNumerico
 }
