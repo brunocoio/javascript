@@ -43,3 +43,21 @@ textinput
 flexbox
 render
 this.props
+flexWrap
+
+Projeto calculadora
+Dimensions.get('window').width
+TouchableHighlight
+numberOfLines
+
+react-native log-andoid (log-ios)
+push
+reduce
+concat
+had
+filter
+TouchableWithoutFeedback
+TouchableOpacity
+Modal
+animationType
+onLevelSelected
