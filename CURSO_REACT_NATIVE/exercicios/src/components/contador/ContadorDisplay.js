@@ -19,6 +19,6 @@ const style = StyleSheet.create({
         width: 300,
     },
     DisplayText: {
-        color: '#fff'
+        color: '#FFF'
     }
 })
