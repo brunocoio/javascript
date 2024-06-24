@@ -26,38 +26,47 @@ npm install -g expo-cli
 expo init AwesomeProject
 //expo-template-blank
 
-importar componente
-importar estilo
-console.warn
-props
-fragment
-Button 
-onPress
-usestate (rooks)
-snippet
-comunicação direta e indireta (hierarquia ou não pai/filho/neto)
-Platform (diferenciar androis e ios)
-FlatList
-componente controlado
-textinput
-flexbox
-render
-this.props
-flexWrap
+    importar componente
+    importar estilo
+    console.warn
+    props
+    fragment
+    Button 
+    onPress
+    usestate (rooks)
+    snippet
+    comunicação direta e indireta (hierarquia ou não pai/filho/neto)
+    Platform (diferenciar androis e ios)
+    FlatList
+    componente controlado
+    textinput
+    flexbox
+    render
+    this.props
+    flexWrap
 
 Projeto calculadora
-Dimensions.get('window').width
-TouchableHighlight
-numberOfLines
+    Dimensions.get('window').width
+    TouchableHighlight
+    numberOfLines
 
-react-native log-andoid (log-ios)
-push
-reduce
-concat
-had
-filter
-TouchableWithoutFeedback
-TouchableOpacity
-Modal
-animationType
-onLevelSelected
+Projeto Mina
+    react-native log-andoid (log-ios)
+    push
+    reduce
+    concat
+    had
+    filter
+    TouchableWithoutFeedback
+    TouchableOpacity
+    Modal
+    animationType
+    onLevelSelected
+
+Navegação
+    createStackNavigator
+    screenOptions={{ headerShown: true }}
+    navigation.navigate
+    navigation.push
+    npm install --save react-native-vector-icons
+    npx react-native link react-native-vector-icons
