@@ -51,8 +51,8 @@ const MenuRoutes = {
         screen: loginOrProfileRouter,
         navigationOptions: {
             title: 'Profile',
-            tabBarIcon: ({ tintColor: color }) =>
-                <Icon name='user' size={30} color={color} />
+            tabBarIcon: ({ tintColor }) =>
+                <Icon name='user' size={30} color={tintColor} />
         }
     }
 }

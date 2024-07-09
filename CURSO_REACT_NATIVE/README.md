@@ -140,3 +140,23 @@ instagram - lambe
     Image
     Dimensions
     Gravatar
+    TouchableWithoutFeedback as TWF
+    onSubmitEditing
+    ScrollView
+    ImagePicker
+    resizeMode
+    keyboardType
+    onChangeText
+    secureTextEntry
+    createStore
+    combineReducers
+    compose
+    applyMiddleware
+    Provider
+    dispatch
+    concat
+    firebase https://lambe-1c50c-default-rtdb.firebaseio.com/
+    npm install -g firebase-tools
+    firebase init
+        firebase login
+    firebase deploy
